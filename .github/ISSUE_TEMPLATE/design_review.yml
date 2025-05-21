@@ -1,0 +1,54 @@
+name: "Design Review Request"
+description: "Submit a design plan for review"
+labels:
+  - design-review
+body:
+  - intro: |
+      ### 📌 User Story / Epic Context
+      What user problem are we solving?  
+      How does this tie into the current product roadmap or epic?
+
+      > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
+      > Related to: #EpicNumber or Product Goal
+
+  - input: |
+      ### 🔍 Problem Statement
+      What is the technical or product challenge here?
+
+  - input: |
+      ### 💡 Proposed Approach
+      How will you solve it? Include:
+      - High-level architecture or flow
+      - Key components or services involved
+      - Why this approach vs alternatives
+
+  - input: |
+      ### 🛠️ Technologies Used
+      Which languages, frameworks, APIs, tools?
+      Are there existing systems/components that can be reused?
+
+  - input: |
+      ### ⚠️ Edge Cases & Risks
+      What could go wrong?
+      - Performance?
+      - Data integrity?
+      - Third-party failures?
+      - Scaling issues?
+
+  - input: |
+      ### 🧩 Assumptions Made
+      What assumptions are you making that might affect this design?
+
+  - input: |
+      ### 🤔 Open Questions
+      What do you want feedback on?
+      Is there anything unclear or risky you'd like help with?
+
+  - checkboxes: |
+      ### 📦 Impact Assessment (Optional)
+      Check off what applies:
+      - [ ] This change affects the database schema
+      - [ ] Requires infrastructure changes
+      - [ ] Impacts performance
+      - [ ] Needs monitoring/logging updates
+      - [ ] May require documentation updates
