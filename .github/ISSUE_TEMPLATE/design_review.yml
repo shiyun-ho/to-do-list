@@ -3,7 +3,8 @@ description: "Submit a design plan for review"
 labels:
   - design-review
 body:
-  - intro: |
+  - type: markdown
+    markdown: |
       ### 📌 User Story / Epic Context
       What user problem are we solving?  
       How does this tie into the current product roadmap or epic?
@@ -11,44 +12,65 @@ body:
       > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
       > Related to: #EpicNumber or Product Goal
 
-  - input: |
-      ### 🔍 Problem Statement
-      What is the technical or product challenge here?
+  - type: input
+    attributes:
+      label: "🔍 Problem Statement"
+      description: "What is the technical or product challenge here?"
+    validations:
+      required: true
 
-  - input: |
-      ### 💡 Proposed Approach
-      How will you solve it? Include:
-      - High-level architecture or flow
-      - Key components or services involved
-      - Why this approach vs alternatives
+  - type: textarea
+    attributes:
+      label: "💡 Proposed Approach"
+      description: |
+        How will you solve it? Include:
+        - High-level architecture or flow
+        - Key components or services involved
+        - Why this approach vs alternatives
+    validations:
+      required: true
 
-  - input: |
-      ### 🛠️ Technologies Used
-      Which languages, frameworks, APIs, tools?
-      Are there existing systems/components that can be reused?
+  - type: textarea
+    attributes:
+      label: "🛠️ Technologies Used"
+      description: |
+        Which languages, frameworks, APIs, tools?
+        Are there existing systems/components that can be reused?
+    validations:
+      required: false
 
-  - input: |
-      ### ⚠️ Edge Cases & Risks
-      What could go wrong?
-      - Performance?
-      - Data integrity?
-      - Third-party failures?
-      - Scaling issues?
+  - type: textarea
+    attributes:
+      label: "⚠️ Edge Cases & Risks"
+      description: |
+        What could go wrong?
+        - Performance?
+        - Data integrity?
+        - Third-party failures?
+        - Scaling issues?
+    validations:
+      required: false
 
-  - input: |
-      ### 🧩 Assumptions Made
-      What assumptions are you making that might affect this design?
+  - type: textarea
+    attributes:
+      label: "🧩 Assumptions Made"
+      description: "What assumptions are you making that might affect this design?"
+    validations:
+      required: false
 
-  - input: |
-      ### 🤔 Open Questions
-      What do you want feedback on?
-      Is there anything unclear or risky you'd like help with?
+  - type: textarea
+    attributes:
+      label: "🤔 Open Questions"
+      description: "What do you want feedback on? Any unclear or risky areas?"
+    validations:
+      required: false
 
-  - checkboxes: |
-      ### 📦 Impact Assessment (Optional)
-      Check off what applies:
-      - [ ] This change affects the database schema
-      - [ ] Requires infrastructure changes
-      - [ ] Impacts performance
-      - [ ] Needs monitoring/logging updates
-      - [ ] May require documentation updates
+  - type: checkboxes
+    attributes:
+      label: "📦 Impact Assessment (Optional)"
+      options:
+        - label: "[ ] This change affects the database schema"
+        - label: "[ ] Requires infrastructure changes"
+        - label: "[ ] Impacts performance"
+        - label: "[ ] Needs monitoring/logging updates"
+        - label: "[ ] May require documentation updates"
