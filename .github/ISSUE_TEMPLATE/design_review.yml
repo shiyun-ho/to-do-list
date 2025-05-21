@@ -1,16 +1,17 @@
-name: "Design Review Request"
-description: "Submit a design plan for review"
+name: Design Review Request
+description: Submit a design plan for review
 labels:
   - design-review
 body:
   - type: markdown
-    markdown: |
-      ### 📌 User Story / Epic Context
-      What user problem are we solving?  
-      How does this tie into the current product roadmap or epic?
+    attributes:
+      value: |
+        ### 📌 User Story / Epic Context
+        What user problem are we solving?  
+        How does this tie into the current product roadmap or epic?
 
-      > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
-      > Related to: #EpicNumber or Product Goal
+        > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
+        > Related to: #EpicNumber or Product Goal
 
   - type: input
     attributes:
@@ -27,6 +28,7 @@ body:
         - High-level architecture or flow
         - Key components or services involved
         - Why this approach vs alternatives
+      placeholder: "e.g., We'll use X service because..."
     validations:
       required: true
 
@@ -36,6 +38,7 @@ body:
       description: |
         Which languages, frameworks, APIs, tools?
         Are there existing systems/components that can be reused?
+      placeholder: "e.g., TypeScript + NestJS, Python FastAPI backend..."
     validations:
       required: false
 
@@ -48,6 +51,7 @@ body:
         - Data integrity?
         - Third-party failures?
         - Scaling issues?
+      placeholder: "e.g., What happens when API rate limits kick in?"
     validations:
       required: false
 
@@ -55,6 +59,7 @@ body:
     attributes:
       label: "🧩 Assumptions Made"
       description: "What assumptions are you making that might affect this design?"
+      placeholder: "e.g., The 3rd party API will return data within 500ms."
     validations:
       required: false
 
@@ -62,12 +67,14 @@ body:
     attributes:
       label: "🤔 Open Questions"
       description: "What do you want feedback on? Any unclear or risky areas?"
+      placeholder: "e.g., Should we cache this data or fetch it live?"
     validations:
       required: false
 
   - type: checkboxes
     attributes:
-      label: "📦 Impact Assessment (Optional)"
+      label: "📦 Impact Assessment"
+      description: "Check off what applies:"
       options:
         - label: "[ ] This change affects the database schema"
         - label: "[ ] Requires infrastructure changes"
