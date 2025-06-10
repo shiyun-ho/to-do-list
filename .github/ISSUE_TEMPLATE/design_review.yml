@@ -12,6 +12,8 @@ body:
 
         > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
         > Related to: #EpicNumber or Product Goal
+      validations:
+      required: true
 
   - type: input
     attributes:
