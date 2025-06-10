@@ -5,8 +5,11 @@ labels:
 body:
   - type: input
     attributes:
-      value: |
-        ### 📌 User Story / Epic Context
+        label: "📌 User Story / Epic Context"
+        value: |
+          > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
+          > Related to: #EpicNumber or Product Goal
+        description: 
         What user problem are we solving?  
         How does this tie into the current product roadmap or epic?
 
