@@ -3,7 +3,7 @@ description: Submit a design plan for review
 labels:
   - design-review
 body:
-  - type: markdown
+  - type: input
     attributes:
       value: |
         ### 📌 User Story / Epic Context
@@ -13,7 +13,7 @@ body:
         > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
         > Related to: #EpicNumber or Product Goal
       validations:
-      required: true
+        required: true
 
   - type: input
     attributes:
