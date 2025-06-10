@@ -14,7 +14,7 @@ body:
           How does this tie into the current product roadmap or epic?
   
           > As a **[type of user]**, I want **[feature]** so that **[benefit]**.  
-          > Related to: #EpicNumber or Product Goal
+          > Related to: (EpicNumber or Product Goal)
 
   - type: input
     attributes:
